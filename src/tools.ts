@@ -1,9 +1,7 @@
 
-let server=""
-if(location.hostname=="localhost")
-    server = "http://127.0.0.1:3001"
-else
-    server = "https://nq9c9mnx-3001.euw.devtunnels.ms"
+let server="http://209.38.250.83:3001"
+
+
 export async function GET(url:string){
     return new Promise((resolve,reject)=>{
         fetch(server+url).then(d=>d.json()).then(v=>resolve(v)).catch(e=>reject(e))
