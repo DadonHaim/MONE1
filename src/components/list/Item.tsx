@@ -66,8 +66,8 @@ export default function Item(mone: IItemProps){
             </div>
             
             <div className="col2">
-                <button className={`${mone.phone1?"":"disable"}`} onClick={call}>call</button>
-                <button className={`${mone.phone1?"":"disable"}`} onClick={msg}>msg</button>
+                <button className={`${mone.phone1?"":"disable"} ${mone.msg?"mgsBack":""} `} onClick={call}>call</button>
+                <button className={`${mone.phone1?"":"disable"} ${mone.msg?"mgsBack":""} `} onClick={msg}>msg</button>
                 <button onClick={waze}>waze</button>
             </div>
 

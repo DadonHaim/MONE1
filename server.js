@@ -87,11 +87,12 @@ app.post("/updatMone", async(req,res)=>{
 })
 
 
+let sends= {}
 
 app.post("/sendWhathapp", async(req,res)=>{
-    log("/sendWhathapp")
-
+    
     let _phone = req.body.phone
+    log("/sendWhathapp",_phone)
     let message = req.body.message
     let mone = await getMoneByIdOrNumber(req.body.moneId)
     if (!_phone) {return res.status(400).json({x:'Phone is required'});}
@@ -100,6 +101,7 @@ app.post("/sendWhathapp", async(req,res)=>{
     const chatId = `${phone}@c.us`;
     try {
         await client.sendMessage(chatId, message); 
+        sends[phone] = true
          res.status(200).json({x:'good'});
     } catch (err) {
         console.error(err);

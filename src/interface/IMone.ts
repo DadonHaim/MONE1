@@ -27,6 +27,8 @@ export default interface IMone{
     images      : any[];
     GPS         : any[];
     date        : any;
+    call        : boolean;
+    msg         : boolean;
 }
 
 

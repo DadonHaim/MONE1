@@ -127,6 +127,8 @@ function extractItems(text) {
               images      : [],
               GPS         : [],
               date        : "",
+              call   : false,
+              msg     :false,
           }
         )
     }))
