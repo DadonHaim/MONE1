@@ -1,0 +1,1 @@
+export type IPage = "monePage"|"listPage"|"settingsPage" |"showCategoryPage"|"showAllPage"
